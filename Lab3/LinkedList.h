@@ -4,10 +4,13 @@
 class LinkedList
 {
 private:
-    Node* head;
-    Node* tail;
     int size;
 public:
+    Node* head;
+    Node* tail;
+    Node* cursor;
     LinkedList();
+    void insert(Node* newNode, int pos);
+    int getSize();
 };
 #endif
