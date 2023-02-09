@@ -1,2 +1,2 @@
 all:
-	g++ .\main.cpp .\Node.cpp .\LinkedList.cpp -I. -omain
+	g++ .\main.cpp .\Node.cpp .\LinkedList.cpp .\DoublyLinkedList.cpp -I. -omain

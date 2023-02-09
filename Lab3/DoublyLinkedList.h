@@ -1,7 +1,7 @@
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
+#ifndef DOUBLYLINKEDLIST_H
+#define DOUBLYLINKEDLIST_H
 #include "Node.h"
-class LinkedList
+class DoublyLinkedList
 {
     private:
         int size;
@@ -9,9 +9,10 @@ class LinkedList
         Node* head;
         Node* tail;
         Node* cursor;
-        LinkedList();
+        DoublyLinkedList();
         void insert(Node* newNode, int pos);
-        void remove(int pos);
         int getSize();
+
+
 };
 #endif

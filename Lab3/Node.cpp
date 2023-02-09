@@ -30,3 +30,11 @@ Node* Node::getNext(){
 void Node::setNext(Node* newNext){
     next = newNext;
 }
+
+Node* Node::getPrev(){
+    return prev;
+}
+
+void Node::setPrev(Node* newPrev){
+    prev = newPrev;
+}

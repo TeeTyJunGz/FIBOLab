@@ -4,6 +4,7 @@ class Node
 {
     private:
         int value;
+        Node* prev;
         Node* next;
     public:
         Node();
@@ -13,5 +14,7 @@ class Node
         void setValue(int newValue);
         Node* getNext();
         void setNext(Node* newNext);
+        Node* getPrev();
+        void setPrev(Node* newPrev);
 };
 #endif
