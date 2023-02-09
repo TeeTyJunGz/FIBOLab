@@ -11,6 +11,7 @@ class DoublyLinkedList
         Node* cursor;
         DoublyLinkedList();
         void insert(Node* newNode, int pos);
+        void remove(int pos);
         int getSize();
 
 

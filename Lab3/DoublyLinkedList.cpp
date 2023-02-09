@@ -12,7 +12,6 @@ DoublyLinkedList::DoublyLinkedList()
 
 void DoublyLinkedList::insert(Node* newNode, int pos)
 {
-    cout << "size: " << size << endl;
     if (pos == 0)
     {   
         if (size == 0)
@@ -70,7 +69,7 @@ void DoublyLinkedList::insert(Node* newNode, int pos)
             if (cursor->getNext() != NULL)
             {
                 cursor->getNext()->setPrev(cursor);
-                cursor->getNext()->getNext()->setPrev(newNode);
+                newNode->getNext()->setPrev(newNode);
             }
             size++;
         }
@@ -80,6 +79,54 @@ void DoublyLinkedList::insert(Node* newNode, int pos)
         }
     }
 
+}
+
+void DoublyLinkedList::remove(int pos)
+{
+    if (pos == 0)
+    {
+        head = head->getNext();
+        if (head != NULL)
+        {
+            head->setPrev(NULL);
+        }        
+        size--;
+    }
+    else if (pos == size-1 && pos != 0)
+    {
+        cursor = head;
+        for (int i = 0; i < pos-1; i++)
+        {
+            cursor = cursor->getNext();
+        }
+        cursor->setNext(NULL);
+        size--;
+    }
+    else
+    {
+        if (pos < size)
+        {
+            cursor = head;
+            Node* temp;
+            for (int i = 0; i < pos-1; i++)
+            {
+                cursor = cursor->getNext();
+            }
+            temp = cursor->getNext()->getNext();
+            cursor->setNext(temp);
+
+            if (temp != NULL)
+            {
+                cursor->getNext()->setPrev(cursor);
+                cursor->getNext()->getNext()->setPrev(cursor->getNext());
+            }
+            size--;
+        }
+        else
+        {
+            cout << "*** LinkedList Size Out Of Range ***" << endl;            
+        }
+    }
 }
 
 int DoublyLinkedList::getSize()

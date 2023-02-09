@@ -85,12 +85,18 @@ int main()
     DList.insert(&Node5,0);
     DList.insert(&Node4,0);
     DList.insert(&Node3,0);
-    DList.insert(&Node2,7);
+    DList.insert(&Node2,3);
 
     // cout << DList.getSize() << endl;
     // DList.insert(&Node1,0);
     // DList.insert(&Node8,0);
     // cout << Node6.getPrev()->getValue() << endl;
     printDList(DList);
+    cout << "-------------------------------------------" << endl;
+    DList.remove(2);
+    DList.remove(4);
+    DList.remove(0);
+    printDList(DList);
+
 
 }
