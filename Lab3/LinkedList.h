@@ -11,6 +11,7 @@ public:
     Node* cursor;
     LinkedList();
     void insert(Node* newNode, int pos);
+    void remove(int pos);
     int getSize();
 };
 #endif

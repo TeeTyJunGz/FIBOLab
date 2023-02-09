@@ -12,9 +12,9 @@ LinkedList::LinkedList()
 
 void LinkedList::insert(Node* newNode, int pos)
 {
-    if(pos == 0)
+    if (pos == 0)
     {
-        if(size == 0)
+        if (size == 0)
         {
             cursor = newNode;
             cursor->setNext(head);
@@ -46,7 +46,7 @@ void LinkedList::insert(Node* newNode, int pos)
     }
     else
     {
-        if(pos <= size)
+        if (pos < size)
         {
             cursor = head;
             for (int i = 0; i < pos-1; i++)
@@ -57,8 +57,48 @@ void LinkedList::insert(Node* newNode, int pos)
             cursor->setNext(newNode);
             size++;
         }
+        else
+        {
+            cout << "*** LinkedList Size Out Of Range ***" << endl;
+        }
     }
     
+}
+
+void LinkedList::remove(int pos)
+{
+    if (pos == 0)
+    {
+        head = head->getNext();
+        size--;
+    }
+    else if (pos == size-1 && pos != 0)
+    {
+        cursor = head;
+        for (int i = 0; i < pos-1; i++)
+        {
+            cursor = cursor->getNext();
+        }
+        cursor->setNext(NULL);
+        size--;
+    }
+    else
+    {
+        if (pos < size)
+        {
+            cursor = head;
+            for (int i = 0; i < pos-1; i++)
+            {
+                cursor = cursor->getNext();
+            }
+            cursor->setNext(cursor->getNext()->getNext());
+            size--;
+        }
+        else
+        {
+            cout << "*** LinkedList Size Out Of Range ***" << endl;            
+        }
+    }
 }
 
 int LinkedList::getSize()

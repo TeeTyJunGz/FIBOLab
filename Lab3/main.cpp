@@ -34,6 +34,10 @@ int main()
     List.insert(&Node5,1);
 
     printList(List);
+    cout << "-------------------------------------------" << endl;
+    // cout << List.getSize() << endl;
+    List.remove(2);
+    printList(List);
     // Node1.getNext()->getNext()->getNext()->setValue(69);
     // cout << Node1.getNext()->getNext()->getNext()->getValue();
     // cout << "tail: " << List.tail->getValue() << endl;
