@@ -13,13 +13,29 @@ Person::Person(string n, int h, int a){
     height = h;
     age = a;
 }
+
 Person::~Person(){
 
 }
 void Person::showPersonInfo(){
-    cout<<"Person name:"<<name<<endl;
-    cout<<"height:"<<height<<endl;
-    cout<<"age:"<<age<<endl;
+    cout<<"Person name: "<<name<<endl;
+    cout<<"height: "<<height<<endl;
+    cout<<"age: "<<age<<endl;
+}
+
+void Person::setName(string newName)
+{
+    name = newName;
+}
+
+void Person::setHeight(int newHeight)
+{
+    height = newHeight;
+}
+
+void Person::setAge(int newAge)
+{
+    age = newAge;
 }
 
 // ***************************-Student-***************************
@@ -39,8 +55,34 @@ Student::~Student(){
 }
 void Student::showStudenInfo(){
     showPersonInfo();
-    cout<<"id:"<<id<<endl;
-    cout<<"grade:"<<grade<<endl;
+    cout<<"id: "<<id<<endl;
+    cout<<"grade: "<<grade<<endl;
 }
 
+// ***************************-Teacher-***************************
 
+Teacher::Teacher():Person()
+{
+    Subject = "";
+}
+
+Teacher::~Teacher()
+{
+
+}
+
+string Teacher::getSubject()
+{
+    return Subject;
+}
+
+void Teacher::setSubject(string newSubject)
+{
+    Subject = newSubject;
+}
+
+void Teacher::showTeacherInfo()
+{
+    showPersonInfo();
+    cout << "Subject: " << Subject;
+}
