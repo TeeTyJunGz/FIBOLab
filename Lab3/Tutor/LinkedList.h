@@ -5,10 +5,11 @@ class LinkedList
 {
     private:
         int size;
+
+    public:
         Node* head;
         Node* tail;
         Node* cursor;
-    public:
         LinkedList();
         void insert(Node* newNode, int pos);
         void remove(int pos);
