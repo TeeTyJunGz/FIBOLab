@@ -1,8 +1,23 @@
-อธิบาย Node คร่าวๆ
+# อธิบาย Node คร่าวๆ
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/68283753/220370476-9a94a919-bded-4850-9e8e-d80b9646dfdd.png" width="350" title="hover text">
 </p>
+
+## ประกาศ .h file
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/68283753/220371576-3ae805c5-2ab8-4a03-926c-e83c3c2d98fd.png" width="350" title="hover text">
+</p>
+
+### #ifndef NODE_H
+หมายถึง หากยังหา define ของ NODE_H ไม่ได้
+
+### #define NODE_H
+หมายถึง ให้ define NODE_H ได้เลย
+
+
+
 
 
 
