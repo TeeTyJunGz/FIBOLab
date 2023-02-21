@@ -1,5 +1,4 @@
 #ifndef NODE_H
-// ถ้าหากไม่เจอ NODE_H
 #define NODE_H
 // ให้ define NODE_H
 class Node
@@ -14,7 +13,6 @@ class Node
         void setValue(int newValue);
         Node* getNext();
         void setNext(Node* newNode);
-
 };
 
 #endif
