@@ -1,4 +1,4 @@
-# อธิบาย Node คร่าวๆ
+# Node
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/68283753/220370476-9a94a919-bded-4850-9e8e-d80b9646dfdd.png" width="350" title="hover text">
@@ -16,28 +16,39 @@
 ### #define NODE_H
 หมายถึง ให้ define NODE_H ได้เลย
 
+### #endif
+หมายถึง สิ้นสุดการ define ของ define นั้นๆแล้ว
 
+## Class
 
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/68283753/220372798-63514a4b-a1d6-4652-9bb3-5fd04f92c109.png" width="350" title="hover text">
+</p>
 
+### class Node
+หมายถึง สร้าง class Node ขึ้นมา
 
+## Private & Public
 
-#ifndef NODE_H
-// ถ้าหากไม่เจอ NODE_H
-#define NODE_H
-// ให้ define NODE_H
-class Node
-{
-    private:    //attribute private สามารถใช้ได้แค่ภายใน class เท่านั้น เช่น class Node สามารถใช้ได้เท่านั้นเมื่อประกาศ private ใน class Node
-        int value;  //สร้าง ตัวแปร int ชื่อ value ไว้เก็บ ค่าหรือข้อมูลของ Node
-        Node* next; //สร้าง ตัวแปร Node* ชื่อ next เอาไว้บอกว่า Node ต่อไปของตัวเองคืออะไร
-    public: //attribute public เป็น attribute ที่สามารถใช้ได้ทุกที่ ไม่ว่าจะเป็น ภายใน Node หรือ นอก Node class
-        Node(); //เป็น constructor ของ class ส่วนมากจะมีทุก class
-        Node(int newValue, Node* newNode);  //เป็น constructor อีกรูปแบบ ที่สามารถกำหรดตัวแปร private ใน class ได้เลย
-        int getValue();
-        void setValue(int newValue);
-        Node* getNext();
-        void setNext(Node* newNode);
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/68283753/220373253-933345d7-fccd-48be-87eb-f8e4d2cb1b78.png" width="350" title="hover text">
+</p>
 
-};
+### Private
+คือ การเก็บตัวแปรหรือ Function ไว้ให้เป็นแบบ private โดย ตัวแปรหรือ function ใน private (เรียกว่า attribute) จะสามารถเข้าถึงได้แค่ภายใน class เท่านั้น เช่นตัวอย่างสามารถเข้าถึง private ได้แค่ใน class Node เท่านั้น
 
-#endif
+### Public
+คือ การเก็บ attribute ที่สามารถเข้าถึงได้จากที่ใดก็ได้ เช่น ไฟล์อื่นๆ อย่าง main.cpp จะสามารถเข้าถึง attribute ของ class Node ได้
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/68283753/220374833-d5e8b98a-ebc3-4c06-9368-3e919d32161b.png" width="350" title="hover text">
+</p>
+
+# LinkedList
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/68283753/220375418-9feaf406-7a26-42e1-aba1-c4af45252d56.png" width="350" title="hover text">
+</p>
+
+LinkedList คือ Node ที่นำมาต่อกัน เหมือนกันขบวนรถไฟ
+
