@@ -1,7 +1,7 @@
 อธิบาย Node คร่าวๆ
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/68283753/220370476-9a94a919-bded-4850-9e8e-d80b9646dfdd.png)
+    <![image](https://user-images.githubusercontent.com/68283753/220370476-9a94a919-bded-4850-9e8e-d80b9646dfdd.png)>
 </p>
 
 
