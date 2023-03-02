@@ -3,15 +3,16 @@
 #include "Node.h"
 class LinkedList
 {
-    private:
-        int size;
     public:
-        Node* head;
-        Node* tail;
-        Node* cursor;
         LinkedList();
         void insert(Node* newNode, int pos);
         void remove(int pos);
         int getSize();
+        void printList();
+    protected:
+        int size;
+        Node* head;
+        Node* tail;
+        Node* cursor;
 };
 #endif

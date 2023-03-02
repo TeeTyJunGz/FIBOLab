@@ -46,7 +46,7 @@ void LinkedList::insert(Node* newNode, int pos)
     }
     else
     {
-        if (pos < size)
+        if (pos < size && pos > 0)
         {
             cursor = head;
             for (int i = 0; i < pos-1; i++)
@@ -84,7 +84,7 @@ void LinkedList::remove(int pos)
     }
     else
     {
-        if (pos < size)
+        if (pos < size && pos > 0)
         {
             cursor = head;
             for (int i = 0; i < pos-1; i++)
@@ -104,4 +104,13 @@ void LinkedList::remove(int pos)
 int LinkedList::getSize()
 {
     return size;
+}
+
+void LinkedList::printList(){
+
+    while (head != NULL)
+    {
+        cout << head->getValue() << endl;
+        head = head->getNext();
+    }
 }

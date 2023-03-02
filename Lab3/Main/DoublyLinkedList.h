@@ -5,14 +5,15 @@ class DoublyLinkedList
 {
     private:
         int size;
-    public:
         Node* head;
         Node* tail;
         Node* cursor;
+    public:
         DoublyLinkedList();
         void insert(Node* newNode, int pos);
         void remove(int pos);
         int getSize();
+        void printDList();
 
 
 };

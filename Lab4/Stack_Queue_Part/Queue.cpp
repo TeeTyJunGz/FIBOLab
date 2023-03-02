@@ -17,19 +17,20 @@ Queue::~Queue()
 
 void Queue::enQueue(Node* newNode)
 {
-    if (size == 0){
+    // if (size == 0){
 
-        tail = newNode;
-        head = tail;
-        size++;
+    //     tail = newNode;
+    //     head = tail;
+    //     size++;
 
-    }
-    else
-    {
-        tail->setNext(newNode);
-        tail = newNode;
-        size++;
-    }
+    // }
+    // else
+    // {
+    //     tail->setNext(newNode);
+    //     tail = newNode;
+    //     size++;
+    // }
+    insert(newNode, getSize());
 }
 
 Node* Queue::deQueue()
@@ -41,10 +42,7 @@ Node* Queue::deQueue()
     }
     else
     {
-        cursor = head;
-        head = head->getNext();
-        size--;
-        return cursor;
+        return remove(0);
     }
 }
 

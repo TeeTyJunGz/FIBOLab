@@ -17,9 +17,10 @@ Stack::~Stack()
 
 void Stack::Push(Node* newNode)
 {
-    newNode->setNext(head);
-    head = newNode;
-    size++;
+    // newNode->setNext(head);
+    // head = newNode;
+    // size++;
+    insert(newNode, 0);
 }
 
 Node* Stack::Pop()
@@ -31,10 +32,11 @@ Node* Stack::Pop()
     }
     else
     {
-        cursor = head;
-        head = head->getNext();
-        size--;
-        return cursor;
+        // cursor = head;
+        // head = head->getNext();
+        // size--;
+        // return cursor;
+        return remove(0);
     }
 }
 

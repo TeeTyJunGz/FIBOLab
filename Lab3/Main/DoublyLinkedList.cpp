@@ -56,7 +56,7 @@ void DoublyLinkedList::insert(Node* newNode, int pos)
     }
     else
     {
-        if (pos < size)
+        if (pos < size && pos > 0)
         {
             cursor = head;
             for (int i = 0; i < pos-1; i++)
@@ -104,7 +104,7 @@ void DoublyLinkedList::remove(int pos)
     }
     else
     {
-        if (pos < size)
+        if (pos < size && pos > 0)
         {
             cursor = head;
             Node* temp;
@@ -134,3 +134,25 @@ int DoublyLinkedList::getSize()
     return size;
 }
 
+void DoublyLinkedList::printDList(){
+
+    cout << "---Print Function---" << endl;
+    Node* last;
+    while (head != NULL)
+    {
+        cout << head->getValue() << endl;
+        last = head;
+        head = head->getNext();
+    }
+    
+    cout << "---Reverse---" << endl;
+
+    while (last != NULL)
+    {
+        cout << last->getValue() << endl;
+        last = last->getPrev();
+    }
+
+    cout << "---End---" << endl;
+
+}

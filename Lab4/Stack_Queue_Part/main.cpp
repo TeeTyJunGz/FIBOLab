@@ -6,37 +6,37 @@
 #include "Queue.h"
 using namespace std;
 
-void printList(LinkedList List){
+// void printList(LinkedList List){
 
-    while (List.head != NULL)
-    {
-        cout << List.head->getValue() << endl;
-        List.head = List.head->getNext();
-    }
-}
+//     while (List.head != NULL)
+//     {
+//         cout << List.head->getValue() << endl;
+//         List.head = List.head->getNext();
+//     }
+// }
 
-void printDList(DoublyLinkedList List){
+// void printDList(DoublyLinkedList List){
 
-    cout << "---Print Function---" << endl;
-    Node* last;
-    while (List.head != NULL)
-    {
-        cout << List.head->getValue() << endl;
-        last = List.head;
-        List.head = List.head->getNext();
-    }
+//     cout << "---Print Function---" << endl;
+//     Node* last;
+//     while (List.head != NULL)
+//     {
+//         cout << List.head->getValue() << endl;
+//         last = List.head;
+//         List.head = List.head->getNext();
+//     }
     
-    cout << "---Reverse---" << endl;
+//     cout << "---Reverse---" << endl;
 
-    while (last != NULL)
-    {
-        cout << last->getValue() << endl;
-        last = last->getPrev();
-    }
+//     while (last != NULL)
+//     {
+//         cout << last->getValue() << endl;
+//         last = last->getPrev();
+//     }
 
-    cout << "---End---" << endl;
+//     cout << "---End---" << endl;
 
-}
+// }
 
 int main()
 {
@@ -109,10 +109,12 @@ int main()
     stack.Push(&Node5);
 
     cout << "---------------Stack---------------" << endl;
+    cout << "Size:" << stack.getSize() << endl;
     cout << "Peek: " << stack.Peek()->getValue() << endl;
 
     cout << "Pop Value: " << stack.Pop()->getValue() << endl;
 
+    cout << "Size After Pop:" << stack.getSize() << endl;
     cout << "Peek After Pop: " << stack.Peek()->getValue() << endl;
 
     Queue queue;
@@ -124,13 +126,14 @@ int main()
     queue.enQueue(&Node5);
 
     cout << "---------------Queue---------------" << endl;
+    cout << "Size: " << queue.getSize() << endl;
     cout << "Peek: " << queue.Peek()->getValue() << endl;
 
     cout << "1st Dequeue Value: " << queue.deQueue()->getValue() << endl;
     cout << "2nd Dequeue Value: " << queue.deQueue()->getValue() << endl;
     cout << "3rd Dequeue Value: " << queue.deQueue()->getValue() << endl;
 
-
+    cout << "Size After Dequeue: " << queue.getSize() << endl;
     cout << "Peek After Dequeue: " << queue.Peek()->getValue() << endl;
 
     return 0;
