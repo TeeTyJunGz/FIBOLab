@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 #include "Node.h"
 #include "LinkedList.h"
-#include "DoublyLinkedList.h"
 #include "Stack.h"
 #include "Queue.h"
 using namespace std;
@@ -40,7 +39,6 @@ using namespace std;
 
 int main()
 {
-    DoublyLinkedList DList;
     LinkedList List;
     Node Node1;
     Node Node2;

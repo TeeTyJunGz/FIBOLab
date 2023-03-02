@@ -18,9 +18,9 @@ Person::~Person(){
 
 }
 void Person::showPersonInfo(){
-    cout<<"Person name: "<<name<<endl;
-    cout<<"height: "<<height<<endl;
-    cout<<"age: "<<age<<endl;
+    cout << "Person name: " << name <<endl;
+    cout << "height: " << height <<endl;
+    cout << "age: " << age <<endl;
 }
 
 void Person::setName(string newName)
