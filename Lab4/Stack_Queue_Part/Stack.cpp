@@ -23,6 +23,24 @@ void Stack::Push(Node* newNode)
     insert(newNode, 0);
 }
 
+void Stack::cardPush(Node* newNode)
+{
+    if (newNode->getValue() == 0)
+    {
+        Node* temp;
+        temp = Pop();
+        newNode->setNext(head);
+        temp->setNext(newNode);
+        head = temp;
+    }
+    else
+    {
+        newNode->setNext(head);
+        head = newNode;
+    }
+    size++;
+}
+
 Node* Stack::Pop()
 {
     if (size == 0)

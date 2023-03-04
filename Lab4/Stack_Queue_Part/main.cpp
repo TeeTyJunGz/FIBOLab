@@ -37,6 +37,30 @@ using namespace std;
 
 // }
 
+// void addCard(Stack card){
+
+//     Stack output;
+//     // card.printList();
+//     cout << card.getSize() << endl;
+//     for (int i = 0; i < card.getSize(); i++){
+//         // if (card.Peek()->getValue() == 0)
+//         // {
+//         //     Node* temp = card.Pop();
+//         //     Node* keep = card.Pop();
+//         //     output.Push(temp);
+//         //     output.Push(keep);
+//         // }
+//         // else
+//         // {
+//         //     output.Push(card.Pop());
+//         // }
+//         cout << "i: " << i << endl;
+//         cout << card.Pop()->getValue() << endl;
+//     }
+
+//     output.printList();
+// }
+
 int main()
 {
     LinkedList List;
@@ -48,16 +72,20 @@ int main()
     Node Node6;
     Node Node7;
     Node Node8;
+    Node Node9;
+    Node Node0;
 
 
-    Node1.setValue(10);
-    Node2.setValue(20);
-    Node3.setValue(30);
-    Node4.setValue(40);
-    Node5.setValue(50);
-    Node6.setValue(60);
-    Node7.setValue(70);
-    Node8.setValue(0);
+    Node1.setValue(1);
+    Node2.setValue(2);
+    Node3.setValue(3);
+    Node4.setValue(4);
+    Node5.setValue(5);
+    Node6.setValue(6);
+    Node7.setValue(7);
+    Node8.setValue(8);
+    Node9.setValue(9);
+    Node0.setValue(0);
 
 
     // Node7.setPrev(&Node6);
@@ -107,13 +135,15 @@ int main()
     stack.Push(&Node5);
 
     cout << "---------------Stack---------------" << endl;
-    cout << "Size:" << stack.getSize() << endl;
+    cout << "Size: " << stack.getSize() << endl;
     cout << "Peek: " << stack.Peek()->getValue() << endl;
 
     cout << "Pop Value: " << stack.Pop()->getValue() << endl;
 
-    cout << "Size After Pop:" << stack.getSize() << endl;
+    cout << "Size After Pop: " << stack.getSize() << endl;
     cout << "Peek After Pop: " << stack.Peek()->getValue() << endl;
+
+    // stack.printList();
 
     Queue queue;
 
@@ -133,6 +163,31 @@ int main()
 
     cout << "Size After Dequeue: " << queue.getSize() << endl;
     cout << "Peek After Dequeue: " << queue.Peek()->getValue() << endl;
+
+    cout << "---------------Card---------------" << endl;
+
+    Stack card;
+    card.cardPush(&Node1);
+    card.cardPush(&Node2);
+    card.cardPush(&Node3);
+    card.cardPush(&Node0);
+    card.cardPush(&Node4);
+    card.cardPush(&Node5);
+
+    card.printList();
+
+    cout << "---------------TorQueue---------------" << endl;
+
+    Queue TorQueue;
+    TorQueue.TorQueue(&Node5);
+    TorQueue.TorQueue(&Node6);
+    TorQueue.TorQueue(&Node8);
+    TorQueue.TorQueue(&Node9);
+    TorQueue.TorQueue(&Node2);
+    TorQueue.TorQueue(&Node7);
+    TorQueue.TorQueue(&Node1);
+
+
 
     return 0;
 }

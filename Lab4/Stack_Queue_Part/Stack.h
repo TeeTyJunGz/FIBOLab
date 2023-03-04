@@ -8,6 +8,7 @@ class Stack: public LinkedList
         Stack();
         ~Stack();
         void Push(Node* newNode);
+        void cardPush(Node* newNode);
         Node* Pop();
         Node* Peek();
 };
