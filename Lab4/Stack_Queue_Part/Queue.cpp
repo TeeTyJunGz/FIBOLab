@@ -36,47 +36,12 @@ void Queue::enQueue(Node* newNode)
     insert(newNode, getSize());
 }
 
-void Queue::TorQueue(Node* newNode)
+void Queue::intQueue(int newInt)
 {
-    // if (size == 0){
-
-    //     tail = newNode;
-    //     head = tail;
-    //     size++;
-
-    // }
-    // else
-    // {
-    //     tail->setNext(newNode);
-    //     tail = newNode;
-    //     size++;
-    // }
-    if (newNode->getValue() % 2 == 0){
-        if (row2.getSize() > 0)
-        {
-            if (row2.head > row3.head)
-            {
-                Node* temp;
-                temp = row2.deQueue();
-                row2.enQueue(newNode);
-            }
-        }
-        else
-        {
-        row2.enQueue(newNode);
-        }
-    }
-    else if (newNode->getValue() % 2 != 0){
-        row3.enQueue(newNode);
-    }
-    if (row3.getSize() == 4)
-    {
-        cout << "row2"  << endl;
-        row2.printList();
-        cout << "row3"  << endl;
-        row3.printList();
-    }
+    Node* newNode = new Node(newInt,NULL);
+    insert(newNode, getSize());
 }
+
 
 Node* Queue::deQueue()
 {
@@ -91,6 +56,19 @@ Node* Queue::deQueue()
     }
 }
 
+int Queue::intDeQueue()
+{
+    if (size == 0)
+    {
+        cout << "*** Your Queue is Empty ***";
+        return NULL;
+    }
+    else
+    {
+        return remove(0)->getValue();
+    }
+}
+
 Node* Queue::Peek()
 {
     if (size == 0)
@@ -101,5 +79,18 @@ Node* Queue::Peek()
     else
     {
         return head;
+    }
+}
+
+int Queue::intPeek()
+{
+    if (size == 0)
+    {
+        cout << "*** Your Queue is Empty ***";
+        return NULL;
+    }
+    else
+    {
+        return head->getValue();
     }
 }

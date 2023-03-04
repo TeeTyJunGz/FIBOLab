@@ -8,9 +8,11 @@ class Queue: public LinkedList
         Queue();
         ~Queue();
         void enQueue(Node* newNode);
-        void TorQueue(Node* newNode);
+        void intQueue(int newInt);
         Node* deQueue();
+        int intDeQueue();
         Node* Peek();
+        int intPeek();
 };
 
 #endif

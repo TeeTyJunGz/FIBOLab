@@ -37,30 +37,39 @@ using namespace std;
 
 // }
 
-// void addCard(Stack card){
+void TorQueue(int qq[], int _size)
+{
+    Queue row_1, row_2;
 
-//     Stack output;
-//     // card.printList();
-//     cout << card.getSize() << endl;
-//     for (int i = 0; i < card.getSize(); i++){
-//         // if (card.Peek()->getValue() == 0)
-//         // {
-//         //     Node* temp = card.Pop();
-//         //     Node* keep = card.Pop();
-//         //     output.Push(temp);
-//         //     output.Push(keep);
-//         // }
-//         // else
-//         // {
-//         //     output.Push(card.Pop());
-//         // }
-//         cout << "i: " << i << endl;
-//         cout << card.Pop()->getValue() << endl;
-//     }
+    for (int i = 0; i < _size; i++)
+    {
+        if (qq[i] % 2 == 0)
+        {
+            row_1.intQueue(qq[i]);
+        }
+        else if (qq[i] % 2 != 0)
+        {
+            row_2.intQueue(qq[i]);
+        }
 
-//     output.printList();
-// }
+        if (row_1.getSize() > 0 && row_2.getSize() > 0)
+        {
+            if (row_1.intPeek() > row_2.intPeek())
+            {
+                row_1.intQueue(row_1.intDeQueue());
+            }
+            else if (row_2.intPeek() > row_1.intPeek())
+            {
+                row_2.intQueue(row_2.intDeQueue());
+            }
+        }
 
+    }
+    cout << "Row_1:" << endl;
+    row_1.printHList();
+    cout << "Row_2:" << endl;
+    row_2.printHList();
+}
 int main()
 {
     LinkedList List;
@@ -178,16 +187,21 @@ int main()
 
     cout << "---------------TorQueue---------------" << endl;
 
-    Queue TorQueue;
-    TorQueue.TorQueue(&Node5);
-    TorQueue.TorQueue(&Node6);
-    TorQueue.TorQueue(&Node8);
-    TorQueue.TorQueue(&Node9);
-    TorQueue.TorQueue(&Node2);
-    TorQueue.TorQueue(&Node7);
-    TorQueue.TorQueue(&Node1);
+    int qq_1[7] = {5,6,8,9,2,7,1};    
+    int qq_2[7] = {1,2,3,4,5,6,7}; //6 2 4 || 1 3 5 7
 
+    TorQueue(qq_1,7);
+    TorQueue(qq_2,7);
 
+    // Queue intq;
+
+    // intq.intQueue(1);
+    // intq.intQueue(2);
+    // intq.intQueue(3);
+    // intq.intQueue(4);
+    // intq.intQueue(5);
+
+    // intq.printList();
 
     return 0;
 }

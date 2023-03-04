@@ -9,6 +9,7 @@ class LinkedList
         Node* remove(int pos);
         int getSize();
         void printList();
+        void printHList();
     protected:
         int size;
         Node* head;

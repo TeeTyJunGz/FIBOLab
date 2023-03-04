@@ -121,3 +121,14 @@ void LinkedList::printList(){
         head = head->getNext();
     }
 }
+
+void LinkedList::printHList(){
+
+    while (head != NULL)
+    {
+        cout << head->getValue() << ", ";
+        head = head->getNext();
+    }
+    cout << endl;
+}
+
