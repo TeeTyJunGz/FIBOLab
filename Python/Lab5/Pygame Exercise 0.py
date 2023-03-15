@@ -4,10 +4,11 @@ win_x, win_y = 800, 480
 screen = pg.display.set_mode((win_x, win_y))
 posX, posY = 20, 20
 
+screen.fill((255, 255, 255)) #it will not update display every time just put it white at 1st time because it not in a loop that have  pg.display.update()
+    
 while(1):
-
-    screen.fill((255, 255, 255))
     pg.draw.circle(screen,(100,100,100),(posX,posY),20)
+
     
     posX += 1 # เพิ่มค่าตำแหน่ง X
     posY += 1 # เพิ่มค่าตำแหน่ง Y
