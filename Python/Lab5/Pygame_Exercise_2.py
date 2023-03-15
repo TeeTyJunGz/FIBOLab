@@ -16,14 +16,14 @@ while(1):
     
     #s = 1/2*at^2
     posY += 0.5*(a)*(t**2) #suvat
-    t += 0.001
+    t += 0.001 #second
     
     if posY >= win_y:
         posY = win_y
         pg.quit()
         exit()
         
-    pg.time.delay(1) #time
+    pg.time.delay(1) #time mili second
     pg.display.update()
     
     for event in pg.event.get():
