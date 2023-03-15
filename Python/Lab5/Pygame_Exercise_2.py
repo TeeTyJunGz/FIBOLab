@@ -14,12 +14,15 @@ while(1):
     screen.fill((255, 255, 255))
     pg.draw.circle(screen,(159,150,110),(posX,posY),r)
     
+    #s = 1/2*at^2
     posY += 0.5*(a)*(t**2) #suvat
     t += 0.001
     
     if posY >= win_y:
         posY = win_y
-    
+        pg.quit()
+        exit()
+        
     pg.time.delay(1) #time
     pg.display.update()
     
