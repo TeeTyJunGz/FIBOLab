@@ -18,8 +18,7 @@ while(1):
     t += 0.001
     
     if posY >= win_y:
-        pg.quit()
-        exit()        
+        posY = win_y
     
     pg.time.delay(1) #time
     pg.display.update()
