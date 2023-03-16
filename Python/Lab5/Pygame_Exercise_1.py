@@ -4,6 +4,7 @@ win_x, win_y = 800, 480
 screen = pg.display.set_mode((win_x, win_y))
 r = 0
 state = 0
+
 while(1):
     
     screen.fill((255, 255, 255))

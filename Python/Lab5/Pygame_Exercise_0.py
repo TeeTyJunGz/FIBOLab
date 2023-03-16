@@ -5,7 +5,7 @@ screen = pg.display.set_mode((win_x, win_y))
 posX, posY = 20, 20
 
 screen.fill((255, 255, 255)) #it will not update display every time just put it white at 1st time because it not in a loop that have  pg.display.update()
-    
+
 while(1):
     pg.draw.circle(screen,(100,100,100),(posX,posY),20)
 

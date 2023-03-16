@@ -34,10 +34,10 @@ while(1):
         
     # print("time: ",t)
     if t >= Mt:
-        # posY = posY+((u*np.sin(tt))*Mt)-(0.5*g*Mt**2)
-        # posX = posX+u*np.cos(tt)*Mt
-        posX = posX
-        posY = posY
+        posY = posY+((u*np.sin(tt))*Mt)-(0.5*g*Mt**2)
+        posX = posX+u*np.cos(tt)*Mt
+        # posX = posX
+        # posY = posY
 
     pg.time.delay(1) #time
     pg.display.update()
