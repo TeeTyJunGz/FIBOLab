@@ -31,7 +31,6 @@ while(1):
     
     if posX >= win_x or posX <= 0 or posY <= 0:
         state = 'out'
-        t = 0
         
     pg.draw.circle(screen,(100,100,100),(posX,posY),20)
     
@@ -45,7 +44,10 @@ while(1):
             posY -= ((u*(np.sin(tt)))*t)-(0.5*(g*(t**2)))
             posX += u*np.cos(tt)*t        
         case 'out':
-            posY += g
+            if posY >= win_y:
+                posY = win_y
+            else:
+                posY += 0.5*(g)*(t**2)
         
     t += 0.001
     
