@@ -12,8 +12,9 @@ class Rectangle:
             itext = MFONT.render(self.text, True, (0,0,0))
             pg.draw.rect(screen,self.color,(self.x,self.y,itext.get_width()+20,itext.get_height()+20))
             screen.blit(itext, (self.x+10, self.y+10))
+        else:
+            pg.draw.rect(screen,self.color,(self.x,self.y,self.w,self.h))
 
-        
 class Button(Rectangle):
     def __init__(self, x=0, y=0, w=0, h=0, text='', color = []):
         Rectangle.__init__(self, x, y, w, h, text, color)
