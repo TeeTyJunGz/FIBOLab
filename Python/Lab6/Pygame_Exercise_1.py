@@ -53,9 +53,5 @@ while(run):
     for event in pg.event.get():
         if event.type == pg.QUIT:
             pg.quit()
-
-        if event.type == pg.KEYDOWN and event.key == pg.K_d: #ปุ่มถูกกดลงและเป็นปุ่ม D
-            print("Key D down")
-        if event.type == pg.KEYUP and event.key == pg.K_a: #ปุ่มถูกปล่อยและเป็นปุ่ม A
-            print("Key A up")
+            run = False
     

@@ -1,41 +1,11 @@
-class Rectangle:
-    def __init__(self,x=0,y=0,w=0,h=0):
-        self.x = x # Position X
-        self.y = y # Position Y
-        self.w = w # Width
-        self.h = h # Height
-
-    def draw(self,screen):
-        pg.draw.rect(screen,(255,0,255),(self.x,self.y,self.w,self.h))
-        
-class Button(Rectangle):
-    def __init__(self, x=0, y=0, w=0, h=0):
-        Rectangle.__init__(self, x, y, w, h)
-    def isMouseOn(self):
-        px = pg.mouse.get_pos()[0]
-        py = pg.mouse.get_pos()[1]
-        if px >= self.x and px <= self.x + self.w and py >= self.y and py <= self.y + self.h:
-            return True
-        else:
-            return False
-    def isMousePress(self):
-        px = pg.mouse.get_pos()[0]
-        py = pg.mouse.get_pos()[1]
-        if px >= self.x and px <= self.x + self.w and py >= self.y and py <= self.y + self.h:
-            if pg.mouse.get_pressed()[0] == 1:
-                return True
-        else:
-            return False
-
 class InputBox:
 
-    def __init__(self, x, y, w, h, text='', num = False):
+    def __init__(self, x, y, w, h, text=''):
         self.rect = pg.Rect(x, y, w, h)
         self.color = COLOR_INACTIVE
         self.text = text
         self.txt_surface = FONT.render(text, True, self.color)
         self.active = False
-        self.num = num
 
     def handle_event(self, event):
         
@@ -69,7 +39,6 @@ class InputBox:
         Screen.blit(self.txt_surface, (self.rect.x+5, self.rect.y+5))
         # Blit the rect.
         pg.draw.rect(Screen, self.color, self.rect, 2)
-                 
 import sys
 import pygame as pg
 
@@ -81,8 +50,8 @@ COLOR_INACTIVE = pg.Color('lightskyblue3') # ตั้งตัวแปรใ�
 COLOR_ACTIVE = pg.Color('dodgerblue2')     # ^^^
 FONT = pg.font.Font(None, 32)
 
-input_box1 = InputBox(100, 100, 140, 32, True) # สร้าง InputBox1
-input_box2 = InputBox(100, 300, 140, 32, False) # สร้าง InputBox2
+input_box1 = InputBox(100, 100, 140, 32) # สร้าง InputBox1
+input_box2 = InputBox(100, 300, 140, 32) # สร้าง InputBox2
 input_boxes = [input_box1, input_box2] # เก็บ InputBox ไว้ใน list เพื่อที่จะสามารถนำไปเรียกใช้ได้ง่าย
 run = True
 
